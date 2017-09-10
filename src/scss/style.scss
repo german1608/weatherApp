@@ -1,0 +1,46 @@
+// Main Sass File
+//$bg-color: rgb(91, 71, 113);
+$bg-color: #040928;
+$overlay-bg-color-2: rgba(230, 34, 34, 0.1);
+$font-color: white;
+
+body {
+    background-color: $bg-color;
+    color: $font-color;
+    font-family: 'Roboto Mono', monospace;
+}
+
+a {
+    color: rgb(238, 173, 173);
+}
+
+a:hover {
+    color: rgb(230, 34, 34);
+}
+
+header {
+    background-color: $overlay-bg-color-2;
+    margin-bottom: 0;
+}
+
+header h1 {
+    font-size: 300%;
+    padding: 15px;
+    border-radius: 100px;
+}
+
+#weather-section {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#info {
+    font-size: 150%;
+    margin-top: 0;
+    padding: 20px;
+}
+
+@media screen and (min-width: 576px) {
+    header h1 {
+        font-size: 400%;
+    }
+}
