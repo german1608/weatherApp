@@ -1,7 +1,26 @@
 var unit = 'C';
 var data;
-var colors = ['#9dddd7', '#1f3265', '#040928'];
+var colors = ['#9dddd7', '#4f6ab3', '#040928'];
+var bgColor=1;
 $(document).ready(function() {
+    // TIME
+    var d = new Date();
+    var h = d.getHours();
+    console.log(d);
+    //morning
+    if (4 <= h && h <= 12) {
+        bgColor=0;
+    }
+    //afternoon
+    else if (13 <= h && h <= 18) {
+        bgColor=1;
+    }
+    //night
+    else {
+        bgColor=2;
+    }
+    $("body").css("background-color", colors[bgColor]);
+
     if ("geolocation" in navigator) {
         $("#weather-section .body .warning-message").addClass("d-none");
         $("#info").removeClass("d-none");
