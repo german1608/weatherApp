@@ -48,7 +48,7 @@ function alertTimer() {
 
 function alerta() {
     if (!done) {
-        alert("This is taking a while.\nPlease allow FCC Weather App to access your location, check that your browser is updated or check internet connection and then reload.");
+        alert("This is taking a while.\nPlease allow FCC Weather App to access your location, check that your browser is updated or check internet connection and then reload.\nNote: Some phones need to turn on location.");
     }
 }
 
