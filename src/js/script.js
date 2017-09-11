@@ -80,8 +80,9 @@ function showInfo(json) {
     $("#weather-icon").attr("alt", json.weather[0].description);
     $("#weather-icon").attr("title", json.weather[0].description);
     // buttons
-    $("#loader-container").addClass("d-none");
-    $("#info").removeClass("d-none");
+    $("#loader-container").fadeOut(400, function() {
+        $("#info").fadeIn();
+    });
 }
 
 function getWeather() {
