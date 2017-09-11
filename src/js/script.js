@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 //timer
 function alertTimer() {
-    setTimeout(alerta, 10000);
+    setTimeout(alerta, 15000);
 }
 
 function alerta() {
