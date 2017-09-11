@@ -15,8 +15,8 @@
         <header>
             <div class="container">
                 <div class="row">
-                    <div class="col text-center p-5">
-                        <h1>Free Code Camp Weather App</h1>
+                    <div class="col text-center p-4">
+                        <h1>FCC Weather App</h1>
                     </div>
                 </div>
             </div>
@@ -24,6 +24,14 @@
         <!-- WEATHER SECTION -->
         <section id="weather-section">
             <div class="body">
+                <!-- loader -->
+                <div class="container" id="loader-container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                </div>
                 <!--if not geolocation -->
                 <p class='warning-message d-none text-danger text-center bg-warning p-2'>Location is not supported by your browser</p>
                 <!-- if geolocation -->
@@ -31,7 +39,7 @@
                     <div class="row">
                         <div class="col">
                             <p><span id="city"></span><span id="country"></span></p>
-                            <p><span id="temp"></span><span id="unit"></span></p>
+                            <p><span id="temp" class="display-4"></span><span id="unit"></span></p>
                             <p><span id="weather"></span></p>
                             <img id="weather-icon" src="">
                         </div>

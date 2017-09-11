@@ -1,8 +1,10 @@
 // Main Sass File
 //$bg-color: rgb(91, 71, 113);
 $bg-color: #4f6ab3;
+$overlay-bg-color: rgba(0, 0, 0, 0.1);
 $overlay-bg-color-2: rgba(230, 34, 34, 0.1);
 $font-color: white;
+$link-color: rgb(230, 93, 34);
 
 body {
     background-color: $bg-color;
@@ -11,11 +13,11 @@ body {
 }
 
 a {
-    color: rgb(238, 173, 173);
+    color: rgb(231, 162, 133);
 }
 
 a:hover {
-    color: rgb(230, 34, 34);
+    color: $link-color;
 }
 
 header {
@@ -24,8 +26,7 @@ header {
 }
 
 header h1 {
-    font-size: 250%;
-    padding: 15px;
+    font-size: 200%;
     border-radius: 100px;
 }
 
@@ -37,6 +38,25 @@ header h1 {
     font-size: 150%;
     margin-top: 0;
     padding: 20px;
+}
+
+.loader {
+    border: 16px solid $overlay-bg-color-2;
+    border-top: 16px solid $link-color;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 150px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (min-width: 576px) {
