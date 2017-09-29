@@ -1,13 +1,13 @@
-var unit = 'C';
-var data;
-var colors = ['#9dddd7', '#4f6ab3', '#040928'];
-var bgColor=1;
-var done = false;
+let unit = 'C';
+let data;
+let colors = ['#9dddd7', '#4f6ab3', '#040928'];
+let bgColor=1;
+let done = false;
 $(document).ready(function() {
     // TIME
     alertTimer();
-    var d = new Date();
-    var h = d.getHours();
+    let d = new Date();
+    let h = d.getHours();
     console.log(d);
     //morning
     if (4 <= h && h <= 12) {
@@ -85,13 +85,13 @@ function showInfo(json) {
 }
 
 function getWeather() {
-    var lat=0;
-    var lon=0;
+    let lat=0;
+    let lon=0;
     navigator.geolocation.getCurrentPosition(function(position) {
         lat = position.coords.latitude;
         lon = position.coords.longitude;
         console.log('Latitude: ' + lat + ', Longitude: ' + lon);
-        var urlApi = "https://fcc-weather-api.glitch.me/api/current?lat=" + lat + "&lon=" + lon;
+        let urlApi = "https://fcc-weather-api.glitch.me/api/current?lat=" + lat + "&lon=" + lon;
         console.log('acceding to ' + urlApi);
         $.ajax({
             url: urlApi,
@@ -101,7 +101,7 @@ function getWeather() {
                 showInfo(data);
             },
             error: function (jqXHR, exception) {
-               var msg = '';
+               let msg = '';
                if (jqXHR.status === 0) {
                    msg = 'Not connect.\n Verify Network.';
                } else if (jqXHR.status == 404) {
